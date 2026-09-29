@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/free-mode';
+@import 'swiper/css/thumbs';
+
+* {
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+  font-family: 'Roboto', sans-serif;
+}
+/* @import "flowbite-react/plugin/tailwindcss"; */
+/* @source "../.flowbite-react/class-list.json"; */
+
+/* @import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination"; */
+
+/* VIP Avatar Frame Styles */
+.vip-avatar-container {
+  position: relative;
+  display: inline-block;
+  padding: 2.5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Bronze Frame */
+.vip-frame-bronze {
+  background: linear-gradient(135deg, #cd7f32, #a05a2c);
+  box-shadow: 0 0 6px rgba(205, 127, 50, 0.4);
+}
+
+/* Silver Frame */
+.vip-frame-silver {
+  background: linear-gradient(135deg, #c0c0c0, #708090);
+  box-shadow: 0 0 6px rgba(192, 192, 192, 0.4);
+}
+
+/* Gold Frame */
+.vip-frame-gold {
+  background: linear-gradient(135deg, #ffd700, #ffa500, #ff8c00);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  animation: vip-glow-gold 2s infinite alternate;
+}
+
+/* Platinum Frame */
+.vip-frame-platinum {
+  background: linear-gradient(135deg, #e5e4e2, #00f2fe, #4facfe);
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+  animation: vip-glow-platinum 2s infinite alternate;
+}
+
+/* Diamond Frame */
+.vip-frame-diamond {
+  background: linear-gradient(45deg, #b000ff, #00e1ff, #ff0077, #b000ff);
+  background-size: 300% 300%;
+  box-shadow: 0 0 12px rgba(176, 0, 255, 0.6);
+  animation: vip-gradient-diamond 4s ease infinite, vip-glow-diamond 2s infinite alternate;
+}
+
+/* Animations */
+@keyframes vip-glow-gold {
+  0% { box-shadow: 0 0 4px rgba(255, 215, 0, 0.4); }
+  100% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.8); }
+}
+
+@keyframes vip-glow-platinum {
+  0% { box-shadow: 0 0 4px rgba(0, 242, 254, 0.4); }
+  100% { box-shadow: 0 0 12px rgba(0, 242, 254, 0.8); }
+}
+
+@keyframes vip-glow-diamond {
+  0% { box-shadow: 0 0 6px rgba(176, 0, 255, 0.5); }
+  100% { box-shadow: 0 0 18px rgba(0, 225, 255, 0.9); }
+}
+
+@keyframes vip-gradient-diamond {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* VIP Badge Crown */
+.vip-badge-crown {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #faad14;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border: 1.5px solid white;
+  z-index: 10;
+  line-height: 1;
+}
+.vip-badge-crown.diamond {
+  background: linear-gradient(135deg, #b000ff, #ff0077);
+}
+.vip-badge-crown.platinum {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+}
+.vip-badge-crown.gold {
+  background: #faad14;
+}
+.vip-badge-crown.silver {
+  background: #8c8c8c;
+}
+.vip-badge-crown.bronze {
+  background: #d46b08;
+}
